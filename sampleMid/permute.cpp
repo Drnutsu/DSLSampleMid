@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
 void permute(string sofar,string rest){
 	if(!rest.empty()){
 		for(int i = 0;i < rest.length();i++){
-			string newRest = rest.substr(0,i) + rest.substr(i+1); // àÍÒµÑÇË¹éÒµÑÇ i áÅÐËÅÑ§µÑÇ i ÁÒÃÇÁ¡Ñ¹·Ñé§ËÁ´à¾×èÍãËé rest à»ç¹ rest ·ÕèµÑ´µÑÇ·Õè i ÍÍ¡
+			string newRest = rest.substr(0,i) + rest.substr(i+1); // à¹€à¸­à¸²à¸•à¸±à¸§à¸«à¸™à¹‰à¸²à¸•à¸±à¸§ i à¹à¸¥à¸°à¸«à¸¥à¸±à¸‡à¸•à¸±à¸§ i à¸¡à¸²à¸£à¸§à¸¡à¸à¸±à¸™à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸”à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰ rest à¹€à¸›à¹‡à¸™ rest à¸—à¸µà¹ˆà¸•à¸±à¸”à¸•à¸±à¸§à¸—à¸µà¹ˆ i à¸­à¸­à¸
 			permute(sofar + rest[i],newRest);
 		}
 	}else cout << sofar << endl;
